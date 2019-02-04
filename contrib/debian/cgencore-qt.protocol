@@ -1,0 +1,11 @@
+[Protocol]
+exec=cgencore-qt '%u'
+protocol=cgencore
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
