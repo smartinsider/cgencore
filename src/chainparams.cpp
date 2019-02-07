@@ -136,7 +136,7 @@ public:
         strDevpubkey = "03b413e31a04568db5b43e4406dbe09ef7d3518b5b64ee9470cb815c2fc643ae57";
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 120;
+        nLastPOWBlock = 160;
         nModifierUpdateBlock = 1999999999;
         nZerocoinStartHeight = 250;
         nZerocoinStartTime = 1548875015; // October 17, 2017 4:30:00 AM
@@ -203,9 +203,13 @@ public:
         assert(hashGenesisBlock == uint256("0x00000a82c900bc5c9e301d4463d522b338fa43062479611af47dd7d67d530f3e"));
         assert(genesis.hashMerkleRoot == uint256("0x24b503b707b4cf9162983b81f052f27567140abf87c8572ccf57048d60893176"));
 
+        vSeeds.push_back(CDNSSeedData("seed1.cgennode.com", "seed1.cgennode.com"));
+        vSeeds.push_back(CDNSSeedData("seed2.cgennode.com", "seed2.cgennode.com"));
+        vSeeds.push_back(CDNSSeedData("seed3.cgennode.com", "seed3.cgennode.com"));
         vSeeds.push_back(CDNSSeedData("seed1.smartinsider.club", "seed1.smartinsider.club"));
         vSeeds.push_back(CDNSSeedData("seed2.smartinsider.club", "seed2.smartinsider.club"));
         vSeeds.push_back(CDNSSeedData("seed3.smartinsider.club", "seed3.smartinsider.club"));
+        vSeeds.push_back(CDNSSeedData("seed4.smartinsider.club", "seed4.smartinsider.club"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 40);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 100);
@@ -216,7 +220,7 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = true; 
+        fMiningRequiresPeers = false; 
         fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
@@ -322,7 +326,7 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fAllowMinDifficultyBlocks = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
